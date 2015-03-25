@@ -1,0 +1,22 @@
+extends layout
+
+block content 
+  a(href='/') home
+  
+  form(method="post" action="/entries")
+        input(
+          type='text'
+          name='title'
+          placeholder='título de tu post'
+          required
+        )
+        br
+        textarea(
+          name='content'
+          placeholder='escribe aquí tu post'
+          rows='4' 
+          cols='50'
+          required
+        )
+        br
+        input(type="submit", value="submit")

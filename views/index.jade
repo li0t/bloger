@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+  a(href='/entries/new') Subir post
+  
+  if entries
+    ul
+      each entry in entries
+        li: a(href='/entries/#{entry._id}') #{entry.title}
+  else
+    p No hay entradas
+     

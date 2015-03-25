@@ -1,0 +1,15 @@
+extends layout
+
+block content 
+  a(href='/') home
+  
+  h3 #{entry.title} 
+  p #{entry.content}
+  p posted on #{entry.date}  
+  a(href="/entries/edit/#{entry._id}") Edit Entry
+  br
+  input(type = "button", id="deleteEntryBtn", value="Delete Entry")
+  script(src='/javascripts/jquery.min.js')
+  script(src='/javascripts/main.js')
+ 
+    
